@@ -1,7 +1,7 @@
 # OOSG
 Optimised Operating System for Gaming
 
-This Debian Sid based operating system does have an optimized  latest  non debug 1000Hz timer  kernel (see 1),  Oibaf ppa Mesa master, Steam and wine-staging  installed. Note to select the desktop option and agree the Steam license in the installer. You can install more software and update your system with the Synaptic program. Check from the  ppa web site that it has amd64 and i386 Mesa packages available before installation.
+This Debian Sid based operating system does have an optimized  latest  non debug 1000Hz timer  kernel (see 1),  Oibaf ppa Mesa master, Steam and wine-staging  installed. Note to select the desktop option and agree the Steam license in the installer. You can install more software and update your system with the Synaptic program. Check from the  ppa web site that it has amd64 and i386 Mesa packages available before installation. Release notes are in YouTube comments: https://www.youtube.com/watch?v=fKJ-IatUfis&list=UUcd5SYylkt9n48ZEH8KrI0A&index=48&t=0s
 
 Install DXVK (see 2) for running windows games. Run winecfg to create the ~/.wine folder first. You can download and install Steam (wine SteamSetup.exe),  Epic (msiexec /i EpicInstaller-10.3.1.msi) and  Uplay (wine UplayInstaller.exe) windows clients. Installing the Origin client, see: https://www.youtube.com/watch?v=-LkyzBGTnYo&list=UUcd5SYylkt9n48ZEH8KrI0A
 
