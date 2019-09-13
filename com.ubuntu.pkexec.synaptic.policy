@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
+
+  <action id="com.ubuntu.pkexec.synaptic">
+    <message>Authentication is required to run the Synaptic Package Manager</message>
+    <message xml:lang="ar">الاستيثاق مطلوب لتشغيل مدير الحزم التشابكي</message>
+    <message xml:lang="bg">Нужно е да се идентифицирате, преди да стартирате пакетния мениджър</message>
+    <message xml:lang="br">Dilesa azgoulennet evit erounit an ardoer pakadoù synaptic</message>
+    <message xml:lang="bs">Za pokretanje programa Synaptic Package Manager potrebna je autentifikacija</message>
+    <message xml:lang="cs">Pro běh Správce balíčků Synaptic je vyžadováno ověření</message>
+    <message xml:lang="de">Authentifizierung ist erforderlich, um die Synaptic-Paketverwaltung zu benutzen</message>
+    <message xml:lang="en_AU">Authentication is required to run the Synaptic Package Manager</message>
+    <message xml:lang="en_GB">Authentication is required to run the Synaptic Package Manager</message>
+    <message xml:lang="eo">Aŭtentigo estas postulata por ruli la pakaĵmastrumilon Sinaptiko</message>
+    <message xml:lang="es">Para ejecutar el gestor de paquetes Synaptic necesita autenticarse</message>
+    <message xml:lang="et">Autentimine on vajalik paketihalduri Synaptic käivitamiseks</message>
+    <message xml:lang="fi">Synaptic-pakettihallinnan käynnistäminen vaatii tunnistautumisen</message>
+    <message xml:lang="fr">Une authentification est requise pour exécuter le gestionnaire de paquets Synaptic</message>
+    <message xml:lang="gl">Para executar o xestor de paquetes Synaptic necesita autenticarse</message>
+    <message xml:lang="he">נדרש אימות כדי להריץ את מנהל החבילות Synaptic</message>
+    <message xml:lang="hr">Potrebna je ovjera za pokretanje Synaptic upravitelja paketima</message>
+    <message xml:lang="hu">Hitelesítés szükséges a Synaptic csomagkezelő futtatásához</message>
+    <message xml:lang="ms">Pengesahihan diperlukan untuk menjalankan Pengurus Pakej Synaptic</message>
+    <message xml:lang="nl">Authenticatie is vereist om Synaptic pakketbeheer uit te voeren</message>
+    <message xml:lang="pl">W celu uruchomienia programu Synaptic Package Manager wymagane jest dodatkowe uwierzytelnianie</message>
+    <message xml:lang="pt_BR">Autenticação é exigida para executar o Gerenciador de Pacotes Synaptic</message>
+    <message xml:lang="ro">Este necesară autentificarea pentru a rula administratorul de pachete Synaptic.</message>
+    <message xml:lang="ru">Для запуска менеджера пакетов Synaptic требуется аутентификация</message>
+    <message xml:lang="sk">Spustenie správcu balíkov Synaptiuc vyžaduje overenie totožnosti</message>
+    <message xml:lang="sl">Za zagon upravljalnika paketov Synaptic je zahtevana skrbniška overitev.</message>
+    <message xml:lang="sr">Потребно је потврђивање идентитета за покретање Синаптика упраника пакета</message>
+    <message xml:lang="sv">Autentisering krävs för att köra Synaptic pakethanterare</message>
+    <message xml:lang="te">సినాప్టిక్ ప్యాకేజీ నిర్వాహకం నడుపుటకు ధృవీకరణ అవసరం</message>
+    <message xml:lang="tr">Synaptic Paket Yöneticisi'ni çalıştırmak için yetkilendirme gerekiyor</message>
+    <message xml:lang="zh_HK">執行 Synaptic 套件管理員前要先認證</message>
+    <message xml:lang="zh_TW">需要驗證以執行Synaptic 套件管理程式</message>
+    <icon_name>synaptic</icon_name>
+    <defaults>
+      <allow_any>yes</allow_any>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/sbin/synaptic</annotate>
+    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+  </action>
+
+</policyconfig>

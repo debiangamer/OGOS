@@ -1,0 +1,74 @@
+#! /bin/sh
+
+# See: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=879642
+
+cp /cdrom/simple-cdd/com.ubuntu.pkexec.synaptic.policy /target/usr/share/polkit-1/actions/
+
+RealName=$(debconf-get passwd/username)
+
+cp /cdrom/simple-cdd/.xsessionrc /target/home/$RealName/
+
+if [ -f "/target/etc/lightdm/lightdm.conf" ] && [ -n "$RealName" ] ; then
+		sed -i "s/#autologin-user-timeout=\?/autologin-user-timeout=0/" /target/etc/lightdm/lightdm.conf
+		sed -i "s/#autologin-user=\?/autologin-user=${RealName}/" /target/etc/lightdm/lightdm.conf
+fi
+
+if [ -f "/target/etc/default/grub" ] ; then
+		sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"\?/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet amdgpu.ppfeaturemask=0xfffd7fff mitigations=off\"/" /target/etc/default/grub
+fi
+
+in-target dpkg --add-architecture i386
+in-target apt update
+in-target update-grub
+
+in-target adduser $RealName sudo
+
+if [ -f "/target/usr/share/alsa/alsa.conf" ] ; then
+	sed -i "s/defaults.ctl.card 0\?/defaults.ctl.card 2/" /target/usr/share/alsa/alsa.conf
+	sed -i "s/defaults.pcm.card 0\?/defaults.pcm.card 2/" /target/usr/share/alsa/alsa.conf
+fi
+
+if [ -f "/target/etc/fstab" ] ; then
+	sed -i "s/errors=remount-ro\?/noatime,errors=remount-ro/" /target/etc/fstab
+fi
+
+in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian testing main"
+in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian testing main non-free"
+#in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu cosmic main"
+#in-target apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5ABCE68FF4633EA42E219156957D2708A03A4626 ; gpg --export --armor 5ABCE68FF4633EA42E219156957D2708A03A4626 > /target/etc/apt/trusted.gpg.d/launchpad.asc
+
+#in-target add-apt-repository -y ppa:oibaf/graphics-drivers
+in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu bionic main"
+cp /cdrom/simple-cdd/launchpad.asc /target/etc/apt/trusted.gpg.d/
+
+# in-target add-apt-repository -y "deb http://ppa.launchpad.net/paulo-miguel-dias/mesa/ubuntu bionic main"
+cp /cdrom/simple-cdd/padokappa.asc /target/etc/apt/trusted.gpg.d/
+
+in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian oldstable main"
+in-target add-apt-repository -y "deb https://dl.winehq.org/wine-builds/debian/ bullseye main"
+
+#fetch-url https://dl.winehq.org/wine-builds/winehq.key /target/etc/apt/trusted.gpg.d/wine-staging.asc
+#fetch-url https://packagecloud.io/debianxfce/customkernel/gpgkey /target/etc/apt/trusted.gpg.d/packagecloud.asc
+cp /cdrom/simple-cdd/customkernel.asc /target/etc/apt/trusted.gpg.d/
+cp /cdrom/simple-cdd/winehq.asc /target/etc/apt/trusted.gpg.d/
+
+in-target add-apt-repository -y "deb https://packagecloud.io/debianxfce/customkernel/debian/ buster main"
+# in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian experimental main"
+in-target apt-get update
+
+in-target apt-get -y -t oldstable install libtxc-dxtn-s2tc
+# in-target apt-get -y -t experimental install xfce4-session xfwm4 libxfce4util-common libxfce4util7 xfce4-appfinder libxfce4panel-2.0-4 xfce4-panel xfce4-settings libxfce4ui-1-0 libxfce4ui-2-0 libxfce4ui-common libxfconf-0-3 xfdesktop4 
+# in-target add-apt-repository -r -y "deb http://ftp.de.debian.org/debian experimental main"
+
+apt-install --allow-remove steam
+in-target apt-get -y install winehq-staging
+in-target apt-get -f -y install
+apt-install --allow-remove mesa-vulkan-drivers
+in-target apt-get -y remove pulseaudio
+in-target apt-get -y remove pavucontrol
+
+cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
+cp /cdrom/simple-cdd/local.conf /target/etc/sysctl.d/
+rm /target/lib/systemd/system/e2scrub_reap.service
+
+

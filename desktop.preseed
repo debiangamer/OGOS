@@ -1,0 +1,11 @@
+d-i partman-basicfilesystems/no_swap boolean false
+d-i partman-auto/expert_recipe string myroot :: 1000 50 -1 ext4 \
+     $primary{ } $bootable{ } method{ format } \
+     format{ } use_filesystem{ } filesystem{ ext4 } \
+     mountpoint{ / } \
+    .
+d-i partman-auto/choose_recipe select myroot
+
+d-i preseed/late_command string sh /cdrom/simple-cdd/desktop.postinst
+d-i netcfg/hostname string optipc
+
