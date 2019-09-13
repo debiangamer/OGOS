@@ -32,7 +32,7 @@ Lock the libasound2-data package with Synaptic to prevent changes when updating 
 2. https://github.com/doitsujin/dxvk/blob/master/README.md
 Games like Assasin's Creed Black Flag need to have the dxvk.conf the in the game executable folder. https://github.com/doitsujin/dxvk/wiki/Configuration
  
-Debian, AMD and Nvidia are  registered trademarks. License is same as Debian has.
+Debian, AMD and Nvidia are  registered trademarks. License is the same as Debian has.
 
 Nvidia drivers: Download the nvidia run file package from the nvidia site. Install dkms and build-essential packages. Fix missing dkms links:
 su 
