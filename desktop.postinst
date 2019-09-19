@@ -14,7 +14,7 @@ if [ -f "/target/etc/lightdm/lightdm.conf" ] && [ -n "$RealName" ] ; then
 fi
 
 if [ -f "/target/etc/default/grub" ] ; then
-		sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"\?/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet amdgpu.ppfeaturemask=0xfffd7fff mitigations=off\"/" /target/etc/default/grub
+		sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"\?/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet amdgpu.ppfeaturemask=0xfffd7fff mitigations=off clearcpuid=514 usbcore.autosuspend=-1\"/" /target/etc/default/grub
 fi
 
 in-target dpkg --add-architecture i386
@@ -38,10 +38,10 @@ in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian testing mai
 #in-target apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5ABCE68FF4633EA42E219156957D2708A03A4626 ; gpg --export --armor 5ABCE68FF4633EA42E219156957D2708A03A4626 > /target/etc/apt/trusted.gpg.d/launchpad.asc
 
 #in-target add-apt-repository -y ppa:oibaf/graphics-drivers
-in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu bionic main"
+in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu eoan main"
 cp /cdrom/simple-cdd/launchpad.asc /target/etc/apt/trusted.gpg.d/
 
-# in-target add-apt-repository -y "deb http://ppa.launchpad.net/paulo-miguel-dias/mesa/ubuntu bionic main"
+# in-target add-apt-repository -y "deb http://ppa.launchpad.net/paulo-miguel-dias/mesa/ubuntu eoan main"
 cp /cdrom/simple-cdd/padokappa.asc /target/etc/apt/trusted.gpg.d/
 
 in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian oldstable main"
@@ -53,7 +53,7 @@ cp /cdrom/simple-cdd/customkernel.asc /target/etc/apt/trusted.gpg.d/
 cp /cdrom/simple-cdd/winehq.asc /target/etc/apt/trusted.gpg.d/
 
 in-target add-apt-repository -y "deb https://packagecloud.io/debianxfce/customkernel/debian/ buster main"
-# in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian experimental main"
+in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian experimental main"
 in-target apt-get update
 
 in-target apt-get -y -t oldstable install libtxc-dxtn-s2tc
