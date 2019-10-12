@@ -22,11 +22,12 @@ Cpu frequency scaling is removed from the kernel, use your Bios to control power
 If you have problems with hdpi settings, logout with save session.
 
 Check your audio devices with the command aplay -l and set the default audio output device number, example:
-sudo leafpad  /usr/share/alsa/alsa.conf
+sudo mousepad  ~ /.asoundrc
+
 defaults.ctl.card 2
+
 defaults.pcm.card 2
 
-Lock the libasound2-data package with Synaptic to prevent changes when updating your system. 
 
 1. https://www.kernel.org/
 2. https://github.com/doitsujin/dxvk/blob/master/README.md
