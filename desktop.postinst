@@ -7,6 +7,7 @@ cp /cdrom/simple-cdd/com.ubuntu.pkexec.synaptic.policy /target/usr/share/polkit-
 RealName=$(debconf-get passwd/username)
 
 cp /cdrom/simple-cdd/.xsessionrc /target/home/$RealName/
+cp /cdrom/simple-cdd/.asoundrc /target/home/$RealName/
 
 if [ -f "/target/etc/lightdm/lightdm.conf" ] && [ -n "$RealName" ] ; then
 		sed -i "s/#autologin-user-timeout=\?/autologin-user-timeout=0/" /target/etc/lightdm/lightdm.conf
@@ -22,11 +23,6 @@ in-target apt update
 in-target update-grub
 
 in-target adduser $RealName sudo
-
-if [ -f "/target/usr/share/alsa/alsa.conf" ] ; then
-	sed -i "s/defaults.ctl.card 0\?/defaults.ctl.card 2/" /target/usr/share/alsa/alsa.conf
-	sed -i "s/defaults.pcm.card 0\?/defaults.pcm.card 2/" /target/usr/share/alsa/alsa.conf
-fi
 
 if [ -f "/target/etc/fstab" ] ; then
 	sed -i "s/errors=remount-ro\?/noatime,errors=remount-ro/" /target/etc/fstab
@@ -70,5 +66,6 @@ in-target apt-get -y remove pavucontrol
 cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
 cp /cdrom/simple-cdd/local.conf /target/etc/sysctl.d/
 rm /target/lib/systemd/system/e2scrub_reap.service
+
 
 

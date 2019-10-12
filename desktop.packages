@@ -44,10 +44,10 @@ python-gi
 haveged
 e2fsprogs
 logsave
-firmware-amd-graphics
+firmware-amdgpu
 firmware-realtek
-linux-image-5.3.0-rc5
-linux-headers-5.3.0-rc5
+linux-image-5.4.0-rc2-next-20191011
+linux-headers-5.4.0-rc2-next-20191011
 libpcre3
 libselinux1
 zlib1g
