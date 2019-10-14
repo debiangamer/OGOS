@@ -40,11 +40,4 @@ AMD is a registered trademark owned by Advanced Micro Devices, Inc
 
 Nvidia is a registered trademark owned by NVIDIA Corporation
 
-
-Nvidia drivers: Download the nvidia run file package from the nvidia site. Install dkms and build-essential packages. Fix missing dkms links:
-su 
-cd /lib/modules/$(uname-r)
-ln -s /usr/src/linux-headers-$(uname -r) build
-ln -s /usr/src/linux-headers-$(uname -r) source
-
-Reboot to the Linux rescue mode from Grub. Run the nvidia installer. Choose to use DKMS and install 32-bit libraries and libglvnd in the installer.
+Nvidia drivers: Download the nvidia run file package from the nvidia site. Install make and linux-headers-xxx packages. Reboot to the Linux rescue mode from Grub. Run the nvidia installer. Install 32-bit libraries and libglvnd in the installer.
