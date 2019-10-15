@@ -31,7 +31,7 @@ mousepad
 xf4s
 deadbeef-static
 gpicview
-xine-ui
+gmerlin
 evince
 firefox
 synaptic
@@ -44,6 +44,7 @@ python-gi
 haveged
 e2fsprogs
 logsave
+accountsservice
 firmware-amdgpu
 firmware-realtek
 linux-image-5.4.0-rc2-next-20191011

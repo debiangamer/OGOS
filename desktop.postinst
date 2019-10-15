@@ -10,12 +10,18 @@ cp /cdrom/simple-cdd/.xsessionrc /target/home/$RealName/
 cp /cdrom/simple-cdd/.asoundrc /target/home/$RealName/
 
 if [ -f "/target/etc/lightdm/lightdm.conf" ] && [ -n "$RealName" ] ; then
+		sed -i "s/#pam-service=lightdm\?/pam-service=lightdm/" /target/etc/lightdm/lightdm.conf
+		sed -i "s/#pam-autologin-service=lightdm-autologin\?/pam-autologin-service=lightdm-autologin/" /target/etc/lightdm/lightdm.conf
 		sed -i "s/#autologin-user-timeout=\?/autologin-user-timeout=0/" /target/etc/lightdm/lightdm.conf
 		sed -i "s/#autologin-user=\?/autologin-user=${RealName}/" /target/etc/lightdm/lightdm.conf
 fi
 
 if [ -f "/target/etc/default/grub" ] ; then
 		sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"\?/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet amdgpu.ppfeaturemask=0xfffd7fff mitigations=off clearcpuid=514 usbcore.autosuspend=-1\"/" /target/etc/default/grub
+fi
+
+if [ -f "/target/etc/modules" ] ; then
+		echo "snd-aloop">> /target/etc/modules
 fi
 
 in-target dpkg --add-architecture i386
