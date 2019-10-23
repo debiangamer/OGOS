@@ -1,6 +1,8 @@
 dbus-x11
 xfce4
-lightdm
+slim
+claws-mail
+synaptic
 thunar-volman
 mesa-utils
 xserver-xorg-input-all
@@ -12,6 +14,7 @@ libgl1-mesa-dri
 x11-xserver-utils
 xinit
 policykit-1
+policykit-1-gnome
 wicd
 sudo
 xfce4-terminal
@@ -33,15 +36,14 @@ deadbeef-static
 gpicview
 gmerlin
 evince
-firefox
-synaptic
+chromium
+chromium-sandbox
 software-properties-common
 bluez
 bluez-obexd
 bluetoothtransfer
 gir1.2-gtk-3.0
 python-gi
-haveged
 e2fsprogs
 logsave
 accountsservice
