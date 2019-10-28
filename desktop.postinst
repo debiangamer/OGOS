@@ -1,10 +1,12 @@
 #! /bin/sh
 
-# See: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=879642
+# To find debconf-get values: sudo debconf-get-selections --installer > debconf-get-values.txt
 
 cp /cdrom/simple-cdd/com.ubuntu.pkexec.synaptic.policy /target/usr/share/polkit-1/actions/
 
 RealName=$(debconf-get passwd/username)
+Cc=$(debconf-get mirror/country)
+Url="http://ftp.${Cc}.debian.org/debian"
 
 cp /cdrom/simple-cdd/.xsessionrc /target/home/$RealName/
 cp /cdrom/simple-cdd/.asoundrc /target/home/$RealName/
@@ -44,33 +46,22 @@ if [ -f "/target/etc/fstab" ] ; then
 	sed -i "s/errors=remount-ro\?/noatime,errors=remount-ro/" /target/etc/fstab
 fi
 
-in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian testing main"
-in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian testing main non-free"
-#in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu cosmic main"
-#in-target apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5ABCE68FF4633EA42E219156957D2708A03A4626 ; gpg --export --armor 5ABCE68FF4633EA42E219156957D2708A03A4626 > /target/etc/apt/trusted.gpg.d/launchpad.asc
+in-target add-apt-repository -y "deb ${Url} testing main"
+in-target add-apt-repository -y "deb ${Url} testing main non-free"
+in-target add-apt-repository -y "deb ${Url} oldstable main"
+#in-target add-apt-repository -y "deb ${Url} experimental main"
 
-#in-target add-apt-repository -y ppa:oibaf/graphics-drivers
-#in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu eoan main"
+#in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu disco main"
 cp /cdrom/simple-cdd/launchpad.asc /target/etc/apt/trusted.gpg.d/
 
 in-target add-apt-repository -y "deb http://ppa.launchpad.net/paulo-miguel-dias/mesa/ubuntu disco main"
 cp /cdrom/simple-cdd/padokappa.asc /target/etc/apt/trusted.gpg.d/
 
-in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian oldstable main"
-in-target add-apt-repository -y "deb https://dl.winehq.org/wine-builds/debian/ bullseye main"
-
-#fetch-url https://dl.winehq.org/wine-builds/winehq.key /target/etc/apt/trusted.gpg.d/wine-staging.asc
-#fetch-url https://packagecloud.io/debianxfce/customkernel/gpgkey /target/etc/apt/trusted.gpg.d/packagecloud.asc
 cp /cdrom/simple-cdd/customkernel.asc /target/etc/apt/trusted.gpg.d/
 cp /cdrom/simple-cdd/winehq.asc /target/etc/apt/trusted.gpg.d/
-
 in-target add-apt-repository -y "deb https://packagecloud.io/debianxfce/customkernel/debian/ buster main"
-#in-target add-apt-repository -y "deb http://ftp.de.debian.org/debian experimental main"
+in-target add-apt-repository -y "deb https://dl.winehq.org/wine-builds/debian/ bullseye main"
 in-target apt-get update
-
-# in-target apt-get -y -t oldstable install libtxc-dxtn-s2tc
-# in-target apt-get -y -t experimental install xfce4-session xfwm4 libxfce4util-common libxfce4util7 xfce4-appfinder libxfce4panel-2.0-4 xfce4-panel xfce4-settings libxfce4ui-1-0 libxfce4ui-2-0 libxfce4ui-common libxfconf-0-3 xfdesktop4 
-# in-target add-apt-repository -r -y "deb http://ftp.de.debian.org/debian experimental main"
 
 apt-install --allow-remove steam
 in-target apt-get -y install winehq-staging
