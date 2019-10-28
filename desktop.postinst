@@ -60,7 +60,7 @@ cp /cdrom/simple-cdd/padokappa.asc /target/etc/apt/trusted.gpg.d/
 cp /cdrom/simple-cdd/customkernel.asc /target/etc/apt/trusted.gpg.d/
 cp /cdrom/simple-cdd/winehq.asc /target/etc/apt/trusted.gpg.d/
 in-target add-apt-repository -y "deb https://packagecloud.io/debianxfce/customkernel/debian/ buster main"
-in-target add-apt-repository -y "deb https://dl.winehq.org/wine-builds/debian/ buster main"
+in-target add-apt-repository -y "deb https://dl.winehq.org/wine-builds/debian/ bullseye main"
 
 in-target apt-get -y update
 in-target apt-get -y upgrade
