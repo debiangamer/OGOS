@@ -45,12 +45,11 @@ bluetoothtransfer
 gir1.2-gtk-3.0
 python-gi
 e2fsprogs
-logsave
 accountsservice
 firmware-amdgpu
 firmware-realtek
-linux-image-5.4.0-rc2-next-20191011
-linux-headers-5.4.0-rc2-next-20191011
+linux-image-5.4.0-rc3-next-20191018
+linux-headers-5.4.0-rc3-next-20191018
 libpcre3
 libselinux1
 zlib1g

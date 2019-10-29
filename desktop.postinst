@@ -10,6 +10,10 @@ Url="http://ftp.${Cc}.debian.org/debian"
 
 cp /cdrom/simple-cdd/.xsessionrc /target/home/$RealName/
 cp /cdrom/simple-cdd/.asoundrc /target/home/$RealName/
+cp /cdrom/simple-cdd/epicinstall.sh /target/usr/local/etc/
+mkdir /target/home/$RealName/Desktop
+chown $RealName /target/home/$RealName/Desktop
+cp /cdrom/simple-cdd/EpicInstaller.desktop /target/home/$RealName/Desktop
 
 
 if [ -f "/target/etc/lightdm/lightdm.conf" ] && [ -n "$RealName" ] ; then
@@ -51,7 +55,7 @@ in-target add-apt-repository -y "deb ${Url} testing main non-free"
 in-target add-apt-repository -y "deb ${Url} oldstable main"
 #in-target add-apt-repository -y "deb ${Url} experimental main"
 
-in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu eoan main"
+in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu disco main"
 cp /cdrom/simple-cdd/launchpad.asc /target/etc/apt/trusted.gpg.d/
 
 #in-target add-apt-repository -y "deb http://ppa.launchpad.net/paulo-miguel-dias/mesa/ubuntu disco main"

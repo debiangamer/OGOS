@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Epic Launcher Installer
+Exec=/usr/local/etc/epicinstall.sh
+Type=Application
+StartupNotify=true
+Comment=Install the Epic Games Launcher
+Terminal=true

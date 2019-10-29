@@ -26,3 +26,4 @@ mountpoint{ / } \
 d-i preseed/late_command string sh /cdrom/simple-cdd/desktop.postinst
 d-i netcfg/hostname string optipc
 
+
