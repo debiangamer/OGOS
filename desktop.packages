@@ -30,14 +30,13 @@ inxi
 gnupg
 alsa-utils
 xsensors
-mousepad
+leafpad
 xf4s
 deadbeef-static
 gpicview
 gmerlin
 evince
-chromium
-chromium-sandbox
+google-chrome-stable
 software-properties-common
 bluez
 bluez-obexd
@@ -48,8 +47,8 @@ e2fsprogs
 accountsservice
 firmware-amdgpu
 firmware-realtek
-linux-image-5.4.0-rc3-next-20191018
-linux-headers-5.4.0-rc3-next-20191018
+linux-image-5.4.0-rc5-next-20191030
+linux-headers-5.4.0-rc5-next-20191030
 libpcre3
 libselinux1
 zlib1g
