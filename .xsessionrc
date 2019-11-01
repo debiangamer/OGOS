@@ -1,0 +1,6 @@
+unset XFSM_VERBOSE
+export WINEDEBUG=-all
+
+
+
+ 
