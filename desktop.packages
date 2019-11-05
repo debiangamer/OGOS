@@ -4,6 +4,7 @@ slim
 claws-mail
 synaptic
 thunar-volman
+gvfs
 mesa-utils
 xserver-xorg-input-all
 xserver-xorg
@@ -33,6 +34,7 @@ xsensors
 leafpad
 xf4s
 deadbeef-static
+xfe
 gpicview
 gmerlin
 evince
