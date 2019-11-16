@@ -3,11 +3,8 @@ Optimised Gaming Operating System
 
 This Debian Sid based operating system does have an optimized  latest  non debug 1000Hz timer  kernel,  Oibaf ppa Mesa master, Steam and wine-staging  installed. Note to select the desktop option and agree the Steam license in the installer. You can install more software and update your system with the Synaptic program. Check from the  ppa web site that it has amd64 and i386 Mesa packages available before installation. You can download the iso file: https://drive.google.com/open?id=1X-2YZZ8qCbXaIF3-lZiCyARrYxHqfKKU
 
-Use the following command if wine is not installed.
-sudo apt-get install winehq-staging
-
-Use the following command if you can not create a desktop laucher from the Applications/Wine menu:
-
+Use the following command if wine is not installed: sudo apt-get install winehq-staging
+Use the following command if you can not create a desktop laucher from the Applications/Wine menu: 
 sudo chown username /home/username/Desktop
 
 Add the following to the launcher command line:
