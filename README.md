@@ -14,7 +14,9 @@ env RADV_PERFTEST=aco ... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
 
 Check your audio devices with the command aplay -l and set the default audio output device number, example:
 leafpad  ~/.asoundrc
+
 defaults.ctl.card 2
+
 defaults.pcm.card 2
 
 Install D9VK from https://github.com/Joshua-Ashton/d9vk/releases (click Assets).
