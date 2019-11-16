@@ -6,6 +6,11 @@ This Debian Sid based operating system does have an optimized  latest  non debug
 Use the following command if wine is not installed.
 sudo apt-get install winehq-staging
 
+Use the following command if you can not create a desktop laucher from the Applications/Wine menu:
+sudo chown username /home/username/Desktop
+Add the following to the launcher command line:
+env RADV_PERFTEST=aco ... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
+
 Check your audio devices with the command aplay -l and set the default audio output device number, example:
 leafpad  ~/.asoundrc
 defaults.ctl.card 2
