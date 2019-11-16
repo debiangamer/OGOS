@@ -7,7 +7,9 @@ Use the following command if wine is not installed.
 sudo apt-get install winehq-staging
 
 Use the following command if you can not create a desktop laucher from the Applications/Wine menu:
+
 sudo chown username /home/username/Desktop
+
 Add the following to the launcher command line:
 env RADV_PERFTEST=aco ... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
 
