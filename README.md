@@ -7,11 +7,7 @@ The installer is for UEFI only and no manual partition. Delete the /usr/share/X1
 
 Use the following command if wine is not installed: sudo apt-get install winehq-staging
 
-Use the following command if you can not create a desktop laucher from the Applications/Wine menu: 
-
-sudo chown username /home/username/Desktop
-
-Add the following to the launcher command line:
+Add the following to the Epic launcher command line after installing:
 env RADV_PERFTEST=aco ... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
 
 Check your audio devices with the command aplay -l and set the default audio output device number, example:
