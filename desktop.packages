@@ -50,8 +50,8 @@ e2fsprogs
 accountsservice
 firmware-amdgpu
 firmware-realtek
-linux-image-5.4.0-rc5-next-20191030
-linux-headers-5.4.0-rc5-next-20191030
+linux-image-5.4.0-rc7-next-20191114
+linux-headers-5.4.0-rc7-next-20191114
 libpcre3
 libselinux1
 zlib1g

@@ -9,12 +9,15 @@ Cc=$(debconf-get mirror/country)
 Url="http://ftp.${Cc}.debian.org/debian"
 
 cp /cdrom/simple-cdd/.xsessionrc /target/home/$RealName/
+chmod ugo+rwx /target/home/$RealName/.xsessionrc
 cp /cdrom/simple-cdd/.asoundrc /target/home/$RealName/
+chmod ugo+rwx  /target/home/$RealName/.asoundrc
 cp /cdrom/simple-cdd/epicinstall.sh /target/usr/local/etc/
+chmod ugo+rx /target/usr/local/etc/epicinstall.sh 
 mkdir /target/home/$RealName/Desktop
 cp /cdrom/simple-cdd/EpicInstaller.desktop /target/home/$RealName/Desktop
-chown $RealName /target/home/$RealName/Desktop
-chown $RealName /target/home/$RealName/Desktop/EpicInstaller.desktop
+chmod ugo+rwx  /target/home/$RealName/Desktop
+chmod ugo+rwx  /target/home/$RealName/Desktop/EpicInstaller.desktop
 
 if [ -f "/target/etc/lightdm/lightdm.conf" ] && [ -n "$RealName" ] ; then
 	sed -i "s/#pam-service=lightdm\?/pam-service=lightdm/" /target/etc/lightdm/lightdm.conf
@@ -81,7 +84,10 @@ in-target apt-get -y remove modemmanager
 in-target apt-get -y remove avahi
 
 cp /cdrom/simple-cdd/helpers.rc /target/home/$RealName/.config/xfce4/
+chmod ugo+rwx  /target/home/$RealName/.config/xfce4/helpers.rc
 cp /cdrom/simple-cdd/google-chrome-stable /target/usr/bin/
+chmod ugo+rx /target/usr/bin/google-chrome-stable
+
 cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
 cp /cdrom/simple-cdd/local.conf /target/etc/sysctl.d/
 rm /target/lib/systemd/system/e2scrub_reap.service
