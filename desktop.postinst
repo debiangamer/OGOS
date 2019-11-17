@@ -14,6 +14,7 @@ cp /cdrom/simple-cdd/epicinstall.sh /target/usr/local/etc/
 mkdir /target/home/$RealName/Desktop
 cp /cdrom/simple-cdd/EpicInstaller.desktop /target/home/$RealName/Desktop
 chown $RealName /target/home/$RealName/Desktop
+chown $RealName /target/home/$RealName/Desktop/EpicInstaller.desktop
 
 if [ -f "/target/etc/lightdm/lightdm.conf" ] && [ -n "$RealName" ] ; then
 	sed -i "s/#pam-service=lightdm\?/pam-service=lightdm/" /target/etc/lightdm/lightdm.conf
