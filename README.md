@@ -8,7 +8,7 @@ Select the desktop option in the installer and accept the Steam license. The ins
 
 Use the following command if wine is not installed: sudo apt-get install winehq-staging
 
-Add the following to the Epic launcher command line after installing: ... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
+Add the following to the Epic launcher command line after installing:RADV_PERFTEST=aco ... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
 
 Check your audio devices with the command aplay -l and set the default audio output device number, example:
 leafpad  ~/.asoundrc
