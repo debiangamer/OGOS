@@ -8,7 +8,7 @@ Select the desktop option in the installer and accept the Steam license. The ins
 
 Use the following command if wine is not installed: sudo apt-get install winehq-staging
 
-Add the following to the Epic launcher command line after installing:RADV_PERFTEST=aco ... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
+Add the following to the Epic launcher command line after installing:env RADV_PERFTEST=aco ... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
 
 Check your audio devices with the command aplay -l and set the default audio output device number, example:
 leafpad  ~/.asoundrc
@@ -17,5 +17,5 @@ defaults.ctl.card 2
 
 defaults.pcm.card 2
 
-Install D9VK from https://github.com/Joshua-Ashton/d9vk/releases (click Assets).
+Install DXVK from https://github.com/doitsujin/dxvk/releases.
 You can download and install: wine SteamSetup.exe 
