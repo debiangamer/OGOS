@@ -34,12 +34,11 @@ xsensors
 leafpad
 xf4s
 deadbeef-static
-xfe
 xarchiver
 gpicview
 gmerlin
 evince
-google-chrome-stable
+firefox
 software-properties-common
 bluez
 bluez-obexd
@@ -50,8 +49,8 @@ e2fsprogs
 accountsservice
 firmware-amdgpu
 firmware-realtek
-linux-image-5.4.0-rc7-next-20191114
-linux-headers-5.4.0-rc7-next-20191114
+linux-image-5.5.0-rc2+
+linux-headers-5.5.0-rc2+
 libpcre3
 libselinux1
 zlib1g

@@ -83,10 +83,8 @@ in-target apt-get -y remove pavucontrol
 in-target apt-get -y remove modemmanager
 in-target apt-get -y remove avahi
 
-cp /cdrom/simple-cdd/helpers.rc /target/home/$RealName/.config/xfce4/
-chmod ugo+rwx  /target/home/$RealName/.config/xfce4/helpers.rc
-cp /cdrom/simple-cdd/google-chrome-stable /target/usr/bin/
-chmod ugo+rx /target/usr/bin/google-chrome-stable
+# cp /cdrom/simple-cdd/helpers.rc /target/home/$RealName/.config/xfce4/
+# chmod ugo+rwx  /target/home/$RealName/.config/xfce4/helpers.rc
 
 cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
 cp /cdrom/simple-cdd/local.conf /target/etc/sysctl.d/
