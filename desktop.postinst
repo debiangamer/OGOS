@@ -58,10 +58,10 @@ in-target add-apt-repository -y "deb ${Url} testing main non-free"
 in-target add-apt-repository -y "deb ${Url} oldstable main"
 #in-target add-apt-repository -y "deb ${Url} experimental main"
 
-in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu disco main"
+in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu focal main"
 cp /cdrom/simple-cdd/launchpad.asc /target/etc/apt/trusted.gpg.d/
 
-#in-target add-apt-repository -y "deb http://ppa.launchpad.net/paulo-miguel-dias/mesa/ubuntu disco main"
+#in-target add-apt-repository -y "deb http://ppa.launchpad.net/paulo-miguel-dias/mesa/ubuntu focal main"
 cp /cdrom/simple-cdd/padokappa.asc /target/etc/apt/trusted.gpg.d/
 
 # cp /cdrom/simple-cdd/customkernel.asc /target/etc/apt/trusted.gpg.d/

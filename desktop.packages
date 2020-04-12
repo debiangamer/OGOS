@@ -33,7 +33,7 @@ alsa-utils
 xsensors
 leafpad
 xf4s
-deadbeef-static
+clementine
 xarchiver
 gpicview
 gmerlin
@@ -49,8 +49,8 @@ e2fsprogs
 accountsservice
 firmware-amdgpu
 firmware-realtek
-linux-image-5.5.0-rc2+
-linux-headers-5.5.0-rc2+
+linux-image-5.6.0-rc2+
+linux-headers-5.6.0-rc2+
 libpcre3
 libselinux1
 zlib1g
