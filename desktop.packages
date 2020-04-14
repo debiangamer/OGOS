@@ -14,9 +14,9 @@ xinit
 libgl1-mesa-dri
 x11-xserver-utils
 xinit
+network-manager-gnome
 policykit-1
 policykit-1-gnome
-wicd
 sudo
 xfce4-terminal
 xfce4-whiskermenu-plugin
@@ -49,8 +49,8 @@ e2fsprogs
 accountsservice
 firmware-amdgpu
 firmware-realtek
-linux-image-5.6.0-rc2+
-linux-headers-5.6.0-rc2+
+linux-image-5.6.0+
+linux-headers-5.6.0+
 libpcre3
 libselinux1
 zlib1g

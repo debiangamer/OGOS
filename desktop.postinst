@@ -55,7 +55,7 @@ fi
 
 in-target add-apt-repository -y "deb ${Url} testing main"
 in-target add-apt-repository -y "deb ${Url} testing main non-free"
-in-target add-apt-repository -y "deb ${Url} oldstable main"
+in-target add-apt-repository -y "deb ${Url} stable main"
 #in-target add-apt-repository -y "deb ${Url} experimental main"
 
 in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu focal main"
