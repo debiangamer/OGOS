@@ -14,7 +14,7 @@ xinit
 libgl1-mesa-dri
 x11-xserver-utils
 xinit
-network-manager-gnome
+connman-gtk
 policykit-1
 policykit-1-gnome
 sudo

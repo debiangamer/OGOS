@@ -3,6 +3,8 @@
 # To find debconf-get values: sudo debconf-get-selections --installer > debconf-get-values.txt
 
 cp /cdrom/simple-cdd/com.ubuntu.pkexec.synaptic.policy /target/usr/share/polkit-1/actions/
+cp /cdrom/simple-cdd/connman-tray.desktop /target/etc/xdg/autostart/
+cp /cdrom/simple-cdd/net.connman.gtk.gschema.xml /target/usr/share/glib-2.0/schemas/
 
 RealName=$(debconf-get passwd/username)
 Cc=$(debconf-get mirror/country)
