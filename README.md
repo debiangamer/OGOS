@@ -21,4 +21,4 @@ Install DXVK from https://github.com/doitsujin/dxvk/releases.
 You can download and install: wine SteamSetup.exe 
 
 Nvidia users, download the gpu driver from:https://www.nvidia.com/en-us/drivers/unix/.
-Nvidia users, install linux-headers,make and gcc packages and reboot to linux safe mode to install the .run file.
+Install linux-headers,make and gcc packages and reboot to linux safe mode to install the .run file.
