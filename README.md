@@ -24,3 +24,5 @@ Nvidia users, download the gpu driver from:https://www.nvidia.com/en-us/drivers/
 Reboot to the linux recovery mode to install the .run file.
 
 Optimizations: non debug 1000HZ timer kernel, no cpu governor (BIOS controls your CPU automatically), migitations are disabled, limited set of device drivers, latest gpu drivers, Xfce desktop and the installer media is 591 MBytes. 
+
+![Ogos Screenshot](https://github.com/debiangamer/OGOS/blob/master/screenshot.png)
