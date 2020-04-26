@@ -13,8 +13,8 @@ xfonts-base
 xinit
 libgl1-mesa-dri
 x11-xserver-utils
-xinit
 connman-tray
+ifstat
 policykit-1
 policykit-1-gnome
 sudo
@@ -22,10 +22,12 @@ xfce4-terminal
 xfce4-whiskermenu-plugin
 xfce4-weather-plugin
 xfce4-taskmanager
+xfce4-screenshooter
 tango-icon-theme
 xfce4-power-manager
 adwaita-icon-theme
 alsamixergui
+jstest-gtk
 perl
 inxi
 gnupg
@@ -51,6 +53,9 @@ firmware-amdgpu
 firmware-realtek
 linux-image-5.6.0+
 linux-headers-5.6.0+
+make
+gcc
+man-db
 libpcre3
 libselinux1
 zlib1g
