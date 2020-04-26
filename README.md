@@ -25,6 +25,6 @@ You can download and install: wine SteamSetup.exe
 Nvidia users, download the gpu driver from:https://www.nvidia.com/en-us/drivers/unix/.
 Reboot to the linux recovery mode to install the .run file.
 
-Optimizations: non debug 1000HZ timer kernel, schedutil cpu governor, migitations are disabled, limited set of device drivers, latest gpu drivers, Xfce desktop and the installer media is 626 MBytes. 
+Optimizations: non debug 1000HZ timer kernel, schedutil cpu governor, mitigations are disabled, limited set of device drivers, latest gpu drivers, Xfce desktop and the installer media is 626 MBytes. 
 
 ![Ogos Screenshot](https://github.com/debiangamer/OGOS/blob/master/screenshot.png)
