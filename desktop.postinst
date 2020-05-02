@@ -5,8 +5,8 @@
 cp /cdrom/simple-cdd/com.ubuntu.pkexec.synaptic.policy /target/usr/share/polkit-1/actions/
 
 RealName=$(debconf-get passwd/username)
-Cc=$(debconf-get mirror/country)
-Url="http://ftp.${Cc}.debian.org/debian"
+# Cc=$(debconf-get mirror/country)
+Url="http://deb.debian.org/debian"
 
 cp /cdrom/simple-cdd/.xsessionrc /target/home/$RealName/
 chmod ugo+rwx /target/home/$RealName/.xsessionrc
@@ -53,9 +53,9 @@ if [ -f "/target/etc/fstab" ] ; then
 	sed -i "s/errors=remount-ro\?/noatime,errors=remount-ro/" /target/etc/fstab
 fi
 
-in-target add-apt-repository -y "deb ${Url} testing main"
-in-target add-apt-repository -y "deb ${Url} testing main non-free"
-in-target add-apt-repository -y "deb ${Url} stable main"
+in-target add-apt-repository -y "deb ${Url} sid main"
+in-target add-apt-repository -y "deb ${Url} sid main non-free"
+#in-target add-apt-repository -y "deb ${Url} stable main"
 #in-target add-apt-repository -y "deb ${Url} experimental main"
 
 in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu focal main"
@@ -68,7 +68,6 @@ in-target apt-get -y upgrade
 
 apt-install --allow-remove steam
 apt-install --allow-remove winehq-staging
-#in-target apt-get -y install winehq-staging
 in-target apt-get -f -y install
 apt-install --allow-remove mesa-vulkan-drivers
 
@@ -76,9 +75,6 @@ in-target apt-get -y remove pulseaudio
 in-target apt-get -y remove pavucontrol
 in-target apt-get -y remove modemmanager
 in-target apt-get -y remove avahi
-
-# cp /cdrom/simple-cdd/helpers.rc /target/home/$RealName/.config/xfce4/
-# chmod ugo+rwx  /target/home/$RealName/.config/xfce4/helpers.rc
 
 cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
 cp /cdrom/simple-cdd/local.conf /target/etc/sysctl.d/
