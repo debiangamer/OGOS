@@ -75,6 +75,7 @@ in-target apt-get -y remove pulseaudio
 in-target apt-get -y remove pavucontrol
 in-target apt-get -y remove modemmanager
 in-target apt-get -y remove avahi
+in-target apt-get -y remove apparmor
 
 cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
 cp /cdrom/simple-cdd/local.conf /target/etc/sysctl.d/

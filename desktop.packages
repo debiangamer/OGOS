@@ -35,10 +35,10 @@ alsa-utils
 xsensors
 leafpad
 xf4s
-clementine
 xarchiver
 gpicview
 gmerlin
+audacious
 evince
 firefox
 software-properties-common
@@ -51,8 +51,8 @@ e2fsprogs
 accountsservice
 firmware-amdgpu
 firmware-realtek
-linux-image-5.6.0+
-linux-headers-5.6.0+
+linux-image-5.6.8+
+linux-headers-5.6.8+
 make
 gcc
 man-db
