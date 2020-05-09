@@ -58,7 +58,7 @@ in-target add-apt-repository -y "deb ${Url} sid main non-free"
 #in-target add-apt-repository -y "deb ${Url} stable main"
 #in-target add-apt-repository -y "deb ${Url} experimental main"
 
-in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu focal main"
+in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu groovy main"
 cp /cdrom/simple-cdd/launchpad.asc /target/etc/apt/trusted.gpg.d/
 cp /cdrom/simple-cdd/winehq.asc /target/etc/apt/trusted.gpg.d/
 in-target add-apt-repository -y "deb https://dl.winehq.org/wine-builds/debian/ bullseye main"
@@ -78,6 +78,7 @@ in-target apt-get -y remove avahi
 in-target apt-get -y remove apparmor
 
 cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
+cp /cdrom/simple-cdd/20-radeon.conf  /target/etc/X11/xorg.conf.d/
 cp /cdrom/simple-cdd/local.conf /target/etc/sysctl.d/
 rm /target/lib/systemd/system/e2scrub_reap.service
 sed -i 's/#LogLevel=info\?/LogLevel=err/' /target/etc/systemd/system.conf
