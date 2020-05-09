@@ -4,7 +4,7 @@ Optimised Gaming Operating System
 This Debian Sid Xfce based operating system does have an optimized https://cgit.freedesktop.org/~agd5f/linux/ drm-next kernel, Oibaf ppa Mesa, the Linux Steam client and wine-staging installed (if all 32-bit libraries are available). You can install more software and update your system with the Synaptic program. You can download the iso file:
 https://drive.google.com/open?id=1Y5ys44heCTCrBvGcEb4ZJgemudMraE2h
 
-Select the desktop option in the installer and accept the Steam license. The installer is for UEFI or MBR Bios and uses the whole disk. Use mininum 4GB of RAM. There is no swap partition but you can use a swap file. The kernel out of memory killer is disabled and applications fails to start if you not have enough free memory. Updated kernel packages you can download from the debs folder.
+Select the desktop option in the installer and accept the Steam license. The installer is for UEFI or MBR Bios and uses the whole disk. Use mininum 4GB of RAM. There is no swap partition but you can use a swap file. The kernel out of memory killer is disabled and applications fails to start if you not have enough free memory. Updated kernel packages you can download from the debs folder. Remove the /usr/share/X11/xorg.conf.d/10-freesync.conf file if you not use the amdgpu driver.
 
 Use the following command if wine is not installed: sudo apt-get install winehq-staging
 
