@@ -77,7 +77,9 @@ in-target apt-get -y remove modemmanager
 in-target apt-get -y remove avahi
 in-target apt-get -y remove apparmor
 
-cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
+if lspci | grep -q "VGA.*AMD"; then
+   cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
+fi
 # cp /cdrom/simple-cdd/20-radeon.conf  /target/etc/X11/xorg.conf.d/
 cp /cdrom/simple-cdd/local.conf /target/etc/sysctl.d/
 rm /target/lib/systemd/system/e2scrub_reap.service
