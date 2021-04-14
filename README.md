@@ -2,7 +2,7 @@
 Optimised Gaming Operating System
 
 This Debian Sid Xfce based operating system does have an optimized and latest Linux kernel, Oibaf ppa Mesa, the Linux Steam client and the winehq-staging package installed (if all 32-bit libraries are available). You can install more software and update your system with the Synaptic program. You can download the iso file:
-https://drive.google.com/open?id=1Y5ys44heCTCrBvGcEb4ZJgemudMraE2h
+https://drive.google.com/file/d/1y8IHBzFyXUTjrYRkDtDei0F-FSmtP-ti/view?usp=sharing
 
 Select the desktop option in the installer and accept the Steam license. The installer is for UEFI or MBR Bios and uses the whole disk. Use mininum 4GB of RAM. There is no swap partition but you can use a swap file. The kernel out of memory killer is disabled and applications fails to start if you not have enough free memory. Updated kernel packages you can download from the debs folder.
 
@@ -23,6 +23,6 @@ You can download and install: wine SteamSetup.exe
 Nvidia users, download the gpu driver from:https://www.nvidia.com/en-us/drivers/unix/.
 Reboot to the linux recovery mode to install the .run file.
 
-Optimizations: non debug 1000HZ timer kernel, schedutil cpu governor, mitigations are disabled, limited set of device drivers, latest gpu drivers, Xfce desktop and the installer media is 626 MBytes. 
+Optimizations: non debug 1000HZ timer kernel, schedutil cpu governor, mitigations are disabled, limited set of device drivers, latest gpu drivers, Xfce desktop and the installer media is 662 MBytes. 
 
 ![Ogos Screenshot](https://github.com/debiangamer/OGOS/blob/master/screenshot2k.png)
