@@ -30,6 +30,8 @@ tango-icon-theme
 xfce4-power-manager
 adwaita-icon-theme
 pavucontrol
+dbus-user-session
+rtkit
 pipewire-audio-client-libraries
 jstest-gtk
 perl
