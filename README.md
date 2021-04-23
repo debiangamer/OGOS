@@ -10,12 +10,13 @@ Use the following command if wine is not installed: sudo apt-get install winehq-
 
 Add the following to the Epic launcher command line after installing:... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
 
-Check your audio devices with the command aplay -l and set the default audio output device number, example:
-leafpad  ~/.asoundrc
-
-defaults.ctl.card 2
-
-defaults.pcm.card 2
+PipeWire is a server and API for handling multimedia on Linux. Run these commands as your regular user (not as root):
+// Check for new service files with:
+systemctl --user daemon-reload
+// Enable and start the new pipewire-pulse service with:
+systemctl --user --now enable pipewire pipewire-pulse
+// Restarting PipeWire services: 
+systemctl --user restart pipewire pipewire-pulse
 
 Install DXVK from https://github.com/doitsujin/dxvk/releases.
 You can download and install: wine SteamSetup.exe 
