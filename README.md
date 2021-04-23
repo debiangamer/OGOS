@@ -10,16 +10,15 @@ Use the following command if wine is not installed: sudo apt-get install winehq-
 
 Add the following to the Epic launcher command line after installing:... Launcher.lnk -SkipBuildPatchPrereq -OpenGL
 
-PipeWire is a server and API for handling multimedia on Linux. Run these commands as your regular user (not as root):
-// Check for new service files with:
+PipeWire is a server and API for handling multimedia on Linux. Run these commands as your regular user (not as root): Check for new service files with:
 
 systemctl --user daemon-reload
 
-// Enable and start the new pipewire-pulse service with:
+Enable and start the new pipewire-pulse service with:
 
 systemctl --user --now enable pipewire pipewire-pulse
 
-// Restarting PipeWire services:
+Restarting PipeWire services:
 
 systemctl --user restart pipewire pipewire-pulse
 
