@@ -12,10 +12,15 @@ Add the following to the Epic launcher command line after installing:... Launche
 
 PipeWire is a server and API for handling multimedia on Linux. Run these commands as your regular user (not as root):
 // Check for new service files with:
+
 systemctl --user daemon-reload
+
 // Enable and start the new pipewire-pulse service with:
+
 systemctl --user --now enable pipewire pipewire-pulse
-// Restarting PipeWire services: 
+
+// Restarting PipeWire services:
+
 systemctl --user restart pipewire pipewire-pulse
 
 Install DXVK from https://github.com/doitsujin/dxvk/releases.
