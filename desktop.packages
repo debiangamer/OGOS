@@ -29,6 +29,7 @@ xfce4-screenshooter
 tango-icon-theme
 xfce4-power-manager
 adwaita-icon-theme
+wallpapers
 pavucontrol
 dbus-user-session
 rtkit
@@ -54,10 +55,10 @@ gir1.2-gtk-3.0
 python-gi
 e2fsprogs
 accountsservice
-firmware-amdgpu
+firmware-amd-graphics
 firmware-realtek
-linux-image-5.12.0-rc8
-linux-headers-5.12.0-rc8
+linux-image-5.12.0-rc7+
+linux-headers-5.12.0-rc7+
 make
 gcc
 man-db

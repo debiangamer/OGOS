@@ -10,8 +10,10 @@ Url="http://deb.debian.org/debian"
 
 cp /cdrom/simple-cdd/.xsessionrc /target/home/$RealName/
 chmod ugo+rwx /target/home/$RealName/.xsessionrc
+cp /cdrom/simple-cdd/.profile /target/home/$RealName/
+chmod ugo+rwx /target/home/$RealName/.profile
 # cp /cdrom/simple-cdd/.asoundrc /target/home/$RealName/
-chmod ugo+rwx  /target/home/$RealName/.asoundrc
+# chmod ugo+rwx  /target/home/$RealName/.asoundrc
 cp /cdrom/simple-cdd/epicinstall.sh /target/usr/local/etc/
 chmod ugo+rx /target/usr/local/etc/epicinstall.sh 
 mkdir /target/home/$RealName/Desktop
@@ -95,7 +97,7 @@ cp /target/usr/share/doc/pipewire/examples/alsa.conf.d/99-pipewire-default.conf 
 touch /target/etc/pipewire/media-session.d/with-jack
 cp /target/usr/share/doc/pipewire/examples/ld.so.conf.d/pipewire-jack-*.conf /target/etc/ld.so.conf.d/
 in-target ldconfig
-
+sed -i  '/\[Service\]/ a Environment=\"PIPEWIRE_DEBUG=1\"' /target/usr/lib/systemd/user/pipewire.service
 
 
 
