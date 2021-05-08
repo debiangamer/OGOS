@@ -10,7 +10,7 @@ x11-xserver-utils
 mesa-utils
 dbus-x11
 xfce4
-slim
+lxdm
 claws-mail
 synaptic
 thunar-volman
@@ -19,6 +19,7 @@ connman-tray
 ifstat
 policykit-1
 policykit-1-gnome
+libpam-gnome-keyring
 sudo
 ppa-purge
 xfce4-terminal

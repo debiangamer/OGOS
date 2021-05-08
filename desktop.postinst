@@ -34,6 +34,11 @@ if [ -f "/target/etc/slim.conf" ] && [ -n "$RealName" ] ; then
 	echo "auto_login      yes" >> /target/etc/slim.conf		
 fi
 
+if [ -f "/target/etc/lxdm/lxdm.conf" ] && [ -n "$RealName" ] ; then
+	sed -i "s/# autologin=dgod\?/autologin=${RealName}/" /target/etc/lxdm/lxdm.conf
+	sed -i "s/# session=\/usr\/bin\/startlxde\?/session=\/usr\/bin\/startxfce4/" /target/etc/lxdm/lxdm.conf		
+fi
+
 if [ -f "/target/etc/default/grub" ] ; then
 	sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\"\?/GRUB_CMDLINE_LINUX_DEFAULT=\"quiet amdgpu.ppfeaturemask=0xfffd7fff mitigations=off clearcpuid=514 usbcore.autosuspend=-1\"/" /target/etc/default/grub
 #	sed -i "s/GRUB_TIMEOUT\?/GRUB_TIMEOUT=1    /" /target/etc/default/grub
@@ -78,15 +83,17 @@ in-target apt-get -y remove pulseaudio
 in-target apt-get -y remove modemmanager
 in-target apt-get -y remove avahi
 in-target apt-get -y remove apparmor
+in-target apt-get -y remove plymouth
 in-target systemctl disable blk-availability.service
 
 if lspci | grep -q "VGA.*AMD"; then
    cp /cdrom/simple-cdd/10-freesync.conf /target/usr/share/X11/xorg.conf.d/
 fi
-# cp /cdrom/simple-cdd/20-radeon.conf  /target/etc/X11/xorg.conf.d/
+
 cp /cdrom/simple-cdd/local.conf /target/etc/sysctl.d/
 rm /target/lib/systemd/system/e2scrub_reap.service
 sed -i 's/#LogLevel=info\?/LogLevel=err/' /target/etc/systemd/system.conf
+# cp /cdrom/simple-cdd/slim.service /target/usr/lib/systemd/system/
 
 in-target apt-get -y -t experimental install pipewire
 in-target apt-get -y -t experimental install pipewire:i386
