@@ -1,0 +1,11 @@
+[Unit]  
+Description=pw-link from hw audio input to output.
+After=pipewire-media-session.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/pw-loopback &
+Restart=on-failure
+
+[Install]
+WantedBy=pipewire-media-session.service
