@@ -14,6 +14,8 @@ xfce4
 lightdm
 claws-mail
 synaptic
+heroic
+python3-legendary-gl
 thunar-volman
 gvfs
 connman-tray
@@ -59,8 +61,8 @@ e2fsprogs
 accountsservice
 firmware-amd-graphics
 firmware-realtek
-linux-image-5.12.0-rc8+
-linux-headers-5.12.0-rc8+
+linux-image-5.13.0-rc2
+linux-headers-5.13.0-rc2
 make
 gcc
 man-db
@@ -68,5 +70,3 @@ libpcre3
 libselinux1
 zlib1g
 libmount1
-
-

@@ -14,12 +14,12 @@ cp /cdrom/simple-cdd/.profile /target/home/$RealName/
 chmod ugo+rwx /target/home/$RealName/.profile
 # cp /cdrom/simple-cdd/.asoundrc /target/home/$RealName/
 # chmod ugo+rwx  /target/home/$RealName/.asoundrc
-cp /cdrom/simple-cdd/epicinstall.sh /target/usr/local/etc/
-chmod ugo+rx /target/usr/local/etc/epicinstall.sh 
-mkdir /target/home/$RealName/Desktop
-cp /cdrom/simple-cdd/EpicInstaller.desktop /target/home/$RealName/Desktop
-chmod ugo+rwx  /target/home/$RealName/Desktop
-chmod ugo+rwx  /target/home/$RealName/Desktop/EpicInstaller.desktop
+# cp /cdrom/simple-cdd/epicinstall.sh /target/usr/local/etc/
+# chmod ugo+rx /target/usr/local/etc/epicinstall.sh 
+# mkdir /target/home/$RealName/Desktop
+# cp /cdrom/simple-cdd/EpicInstaller.desktop /target/home/$RealName/Desktop
+# chmod ugo+rwx  /target/home/$RealName/Desktop
+# chmod ugo+rwx  /target/home/$RealName/Desktop/EpicInstaller.desktop
 
 if [ -f "/target/etc/lightdm/lightdm.conf" ] && [ -n "$RealName" ] ; then
 	sed -i "s/#pam-service=lightdm\?/pam-service=lightdm/" /target/etc/lightdm/lightdm.conf
@@ -74,7 +74,7 @@ in-target apt-get -y update
 in-target apt-get -y upgrade
 
 apt-install --allow-remove steam
-apt-install --allow-remove winehq-staging
+apt-install --allow-remove winehq-devel
 in-target apt-get -f -y install
 apt-install --allow-remove mesa-vulkan-drivers
 
