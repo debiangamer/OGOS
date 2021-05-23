@@ -10,15 +10,7 @@ Use the following command if wine is not installed: sudo apt-get install winehq-
 Install DXVK from https://github.com/doitsujin/dxvk/releases.
 You can download and install: wine UbisoftConnectInstaller.exe (install winbind, p11-kit-modules:i386 and p11-kit:i386 packages to make it work)
 
-Heroic have problems downloading large games. Use legendary:
-
-To log in: legendary auth
-
-Listing your games: legendary list-games
-
-Installing a game: legendary install app_name
-
-Launch a game with online authentication: legendary launch app_name
+Heroic shows that a game is not installed after you click install. Legendary processes are downloading still so wait a game to download.
 
 Nvidia users, download the gpu driver from:https://www.nvidia.com/en-us/drivers/unix/.
 Reboot to the linux recovery mode to install the .run file.
