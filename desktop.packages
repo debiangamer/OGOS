@@ -15,7 +15,6 @@ lightdm
 claws-mail
 synaptic
 heroic
-python3-legendary-gl
 thunar-volman
 gvfs
 connman-tray
@@ -61,8 +60,8 @@ e2fsprogs
 accountsservice
 firmware-amd-graphics
 firmware-realtek
-linux-image-5.13.0-rc2
-linux-headers-5.13.0-rc2
+linux-image-5.13.0-rc3
+linux-headers-5.13.0-rc3
 make
 gcc
 man-db
