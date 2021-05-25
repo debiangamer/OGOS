@@ -4,7 +4,7 @@ After=pipewire-media-session.service
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/pw-loopback &
+ExecStart=/usr/bin/pw-loopback &amp;
 Restart=on-failure
 
 [Install]
