@@ -104,6 +104,6 @@ cp /target/usr/share/doc/pipewire/examples/alsa.conf.d/99-pipewire-default.conf 
 touch /target/etc/pipewire/media-session.d/with-jack
 cp /target/usr/share/doc/pipewire/examples/ld.so.conf.d/pipewire-jack-*.conf /target/etc/ld.so.conf.d/
 in-target ldconfig
-sed -i  '/\[Service\]/ a Environment=\"PIPEWIRE_DEBUG=1\"' /target/usr/lib/systemd/user/pipewire.service
+sed -i "s/log.level\?/log.level                              = 1    /" /target/etc/pipewire/pipewire.conf
 cp /cdrom/simple-cdd/pwconnect.service /target/etc/systemd/user/
 

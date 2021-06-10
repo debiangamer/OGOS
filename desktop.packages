@@ -31,6 +31,7 @@ xfce4-taskmanager
 xfce4-screenshooter
 tango-icon-theme
 xfce4-power-manager
+xfce4-pulseaudio-plugin
 adwaita-icon-theme
 wallpapers
 pavucontrol
@@ -60,8 +61,8 @@ e2fsprogs
 accountsservice
 firmware-amd-graphics
 firmware-realtek
-linux-image-5.13.0-rc3
-linux-headers-5.13.0-rc3
+linux-image-5.13.0-rc2+
+linux-headers-5.13.0-rc2+
 make
 gcc
 man-db
