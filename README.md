@@ -5,7 +5,7 @@ This Debian Sid Xfce based operating system does have an optimized and latest Li
 
 sudo cp xxx.iso /dev/sdX
 
-Where xxx is the iso file name and X is your memory device. Use the dmesg command to see it. In windows you can use balaenaEtcher to raw-write the iso file to the  memory device.
+Where xxx is the iso file name and X is your memory device. Use the dmesg command to see it. In windows you can use balenaEtcher to raw-write the iso file to the  memory device.
 
 Select the desktop option in the installer and accept the Steam license. The installer is for UEFI or MBR Bios and uses the whole disk. Use mininum 4GB of RAM. There is no swap partition but you can use a swap file. The kernel out of memory killer is disabled and applications fails to start if you not have enough free memory. Updated kernel packages you can download from the debs folder.
 
