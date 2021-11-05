@@ -1,7 +1,7 @@
 # OGOS
 Optimised Gaming Operating System
 
-This Debian Sid Xfce based operating system does have an optimized and latest Linux kernel, Oibaf ppa Mesa, Linux Steam and Heroic Epic games launchers and the winehq-devel package installed (if all 32-bit libraries are available). You can install more software and update your system with the Synaptic program. You can download the iso file from the Releases section in this page. In Debian type:
+This Debian Sid Xfce based operating system does have an optimized and latest Linux kernel, Oibaf ppa Mesa, Linux Steam and Heroic Epic games launchers, the secure Brave web browser and the winehq-devel package installed (if all 32-bit libraries are available). You can install more software and update your system with the Synaptic program. You can download the iso file from the Releases section in this page. In Debian type:
 
 sudo cp xxx.iso /dev/sdX
 
@@ -17,6 +17,6 @@ You can download and install: wine UbisoftConnectInstaller.exe (install winbind,
 Nvidia users, download the gpu driver from:https://www.nvidia.com/en-us/drivers/unix/.
 Reboot to the linux recovery mode to install the .run file.
 
-Optimizations: non debug 1000HZ timer kernel, schedutil cpu governor, mitigations are disabled, limited set of device drivers, latest gpu drivers, Xfce desktop and the installer media is 771 MBytes. 
+Optimizations: non debug 1000HZ timer kernel, schedutil cpu governor, mitigations are disabled, limited set of device drivers, latest gpu drivers, Xfce desktop and the installer media is 815 MBytes. 
 
 ![Ogos Screenshot](https://github.com/debiangamer/OGOS/blob/master/screenshot2k.png)
