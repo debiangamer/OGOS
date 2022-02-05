@@ -65,7 +65,7 @@ in-target add-apt-repository -y "deb ${Url} sid main non-free"
 in-target add-apt-repository -y "deb ${Url} bookworm main"
 in-target add-apt-repository -y "deb ${Url} experimental main"
 
-in-target add-apt-repository -y "deb http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu focal main"
+in-target add-apt-repository -y "deb https://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu focal main"
 cp /cdrom/simple-cdd/launchpad.asc /target/etc/apt/trusted.gpg.d/
 cp /cdrom/simple-cdd/winehq.asc /target/etc/apt/trusted.gpg.d/
 in-target add-apt-repository -y "deb https://dl.winehq.org/wine-builds/debian/ bullseye main"

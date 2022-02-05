@@ -50,7 +50,6 @@ gpicview
 mpv
 audacious
 evince
-firefox
 software-properties-common
 bluez
 bluez-obexd
@@ -61,8 +60,8 @@ e2fsprogs
 accountsservice
 firmware-amd-graphics
 firmware-realtek
-linux-image-5.13.0-rc2+
-linux-headers-5.13.0-rc2+
+linux-image-5.16.3
+linux-headers-5.16.3
 make
 gcc
 man-db
